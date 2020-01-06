@@ -8,7 +8,39 @@
   <title>Animated Navbar on Scroll</title>
 </head>
 <body>
-  
+  <header>
+    <nav id="nav">
+      <h1>Louis Wong</h1>
+      <ul>
+        <li><a data-page="home" href="#home" class="active">Home</a></li>
+        <li><a data-page="about" href="#about">About</a></li>
+        <li><a data-page="project" href="#project">Project</a></li>
+        <li><a data-page="contact" href="#contact">Contact</a></li>
+        <div class="navEffect"></div>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section data-index="0" id="home" class="home">
+      <h2>Home</h2>
+    </section>
+    <section data-index="1" id="about" class="about">
+      <h2>About</h2>
+    </section>
+    <section data-index="2" id="project" class="project">
+      <h2>Project</h2>
+    </section>
+    <section data-index="3" id="contact" class="contact">
+      <h2>Contact</h2>
+    </section>
+  </main>
   <script src="./app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zenscroll/4.0.2/zenscroll-min.js"></script>
+  <script>
+    var defaultDuration = 777 // ms default: 777
+    // var edgeOffset = 42 // px
+    zenscroll.setup(defaultDuration)
+  </script>
 </body>
 </html>
